@@ -8,6 +8,7 @@ const userListEL = document.querySelector(".user-list");
 async function main(){
     const users = await fetch("https://jsonplaceholder.typicode.com/users");
     const usersData = await users.json();
+    
     userListEL.innerHTML = usersData.map((user) => userHtml(user)).join("");
     
 }

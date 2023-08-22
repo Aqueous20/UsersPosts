@@ -11,9 +11,7 @@ async function renderPosts(id){
     const posts = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
     const postsData = await posts.json();
     console.log(postsData)
-    postListEL.innerHTML = postsData.map((posts) => postHtml(posts)).join("");
-    
-    
+    postListEL.innerHTML = postsData.map((posts) => postHtml(posts)).join("");       
 }
 
 function postHtml(post){
